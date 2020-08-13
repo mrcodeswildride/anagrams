@@ -2,26 +2,26 @@
 <html>
 
 <head>
-    <title>Anagrams</title>
-    <meta name="viewport" content="width=device-width, initial-scale=0.6">
-    <link rel="stylesheet" href="stylesheet.css">
+	<title>Anagrams</title>
+	<meta name="viewport" content="width=device-width, initial-scale=0.6">
+	<link href="style.css" rel="stylesheet">
+	<script src="script.js" defer>
+
+	</script>
 </head>
 
 <body>
-    <h1>Anagrams</h1>
+	<h1>Anagrams</h1>
 
-    <input id="letters" type="text" placeholder="letters" />
-    <button id="findWords">Find words</button>
+	<input type="text" placeholder="letters" autocomplete="off" id="letters">
+  <button id="wordsButton">Find words</button>
 
-    <div id="showAllDiv" class="hidden">
-        <input id="showAll" type="checkbox">
-        <label for="showAll">Show all permutations</label>
-    </div>
+  <div id="showAllDiv">
+    <input type="checkbox" id="showAllCheckbox">
+    <label for="showAllCheckbox">Show all permutations</label>
+  </div>
 
-    <p id="message"></p>
-    <div id="words"></div>
-
-    <script src="script.js"></script>
+  <div id="box"></div>
 </body>
 
 </html>
