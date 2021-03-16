@@ -131,7 +131,7 @@ function fetchDictionary() {
 }
 
 function makeDictionary() {
-  let words = this.response.split(`\n`)
+  let words = this.response.split(/\r?\n/)
 
   for (let word of words) {
     dictionary[word] = true
