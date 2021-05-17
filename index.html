@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Anagrams</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+  </head>
 
-<head>
-	<title>Anagrams</title>
-	<meta name="viewport" content="width=device-width, initial-scale=0.6">
-	<link href="style.css" rel="stylesheet">
-	<script src="script.js" defer>
+  <body>
+    <h1>Anagrams</h1>
 
-	</script>
-</head>
+    <input type="text" placeholder="letters" autocomplete="off" id="letters" />
+    <button id="wordsButton">Find words</button>
 
-<body>
-	<h1>Anagrams</h1>
+    <div id="showAllDiv">
+      <input type="checkbox" id="showAllCheckbox" />
+      <label for="showAllCheckbox">Show all permutations</label>
+    </div>
 
-	<input type="text" placeholder="letters" autocomplete="off" id="letters">
-  <button id="wordsButton">Find words</button>
-
-  <div id="showAllDiv">
-    <input type="checkbox" id="showAllCheckbox">
-    <label for="showAllCheckbox">Show all permutations</label>
-  </div>
-
-  <div id="box"></div>
-</body>
-
+    <div id="box"></div>
+  </body>
 </html>

@@ -19,34 +19,17 @@ letters.focus()
 function startFindWords() {
   let lettersValue = letters.value.trim().toLowerCase()
 
-  if (lettersValue != `` && !finding) {
+  if (!finding) {
     showAllCheckbox.checked = false
 
     if (lettersValue.length > 10) {
       box.innerHTML = `Input cannot have more than 10 letters.`
       showHideCheckbox(lettersValue)
-    }
-    else {
+    } else {
       box.innerHTML = `Finding all permutations...`
       finding = true
 
       setTimeout(findWords, 10, lettersValue)
-    }
-  }
-
-  letters.focus()
-}
-
-function toggleShowAll() {
-  if (!finding) {
-    if (showAllCheckbox.checked) {
-      box.innerHTML = `Showing all permutations...`
-      finding = true
-
-      setTimeout(showWords, 10)
-    }
-    else {
-      showWords()
     }
   }
 }
@@ -76,15 +59,6 @@ function findWords(lettersValue) {
 
   showHideCheckbox(lettersValue)
   showWords()
-}
-
-function showHideCheckbox(lettersValue) {
-  if (lettersValue.length <= 7) {
-    showAllDiv.style.display = `inline-block`
-  }
-  else {
-    showAllDiv.style.display = `none`
-  }
 }
 
 function showWords() {
@@ -121,6 +95,27 @@ function makeWordDiv(word) {
 
 function labelValid(wordDiv) {
   wordDiv.classList.add(`valid`)
+}
+
+function showHideCheckbox(lettersValue) {
+  if (lettersValue.length <= 7) {
+    showAllDiv.style.display = `inline-block`
+  } else {
+    showAllDiv.style.display = `none`
+  }
+}
+
+function toggleShowAll() {
+  if (!finding) {
+    if (showAllCheckbox.checked) {
+      box.innerHTML = `Showing all permutations...`
+      finding = true
+
+      setTimeout(showWords, 10)
+    } else {
+      showWords()
+    }
+  }
 }
 
 function fetchDictionary() {
